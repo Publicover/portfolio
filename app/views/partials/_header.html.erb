@@ -1,23 +1,23 @@
 <nav class='navbar navbar-expand-sm navbar-dark'>
 
-
-
   <div>
-    <span class='navbar-brand mb-0 h1'>Jim's Portfolio</span>
+    <%= link_to "Jim's Portfolio", root_path, class: 'navbar-brand mb-0 h1' %>
   </div>
 
+  <button type="button" class="btn-sm navbar-toggler navbar-toggler-right"
+          data-toggle="collapse" data-target="#myNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-    <button type="button" class="btn-sm navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#myNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-
-    <div class='collapse navbar-collapse' id='myNavbar'>
-      <ul class='navbar-nav ml-auto text-nowrap'>
-        <li class='nav-item nav-link'>Programmer</li>
-        <li class='nav-item nav-link'>Grammar Pro</li>
-      </ul>
-    </div>
-
+  <div class='collapse navbar-collapse' id='myNavbar'>
+    <ul class='navbar-nav ml-auto text-nowrap'>
+      <li class='nav-item nav-link <%= 'active' if current_page?(apps_path) %>'>
+        <%= link_to 'Programmer', apps_path, class: 'nav-link' %>
+      </li>
+      <li class='nav-item nav-link <%= 'active' if current_page?(jobs_path) %>'>
+        <%= link_to 'Grammar Pro', jobs_path, class: 'nav-link' %>
+      </li>
+    </ul>
+  </div>
 
 </nav>
