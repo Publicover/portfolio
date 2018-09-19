@@ -1,4 +1,7 @@
 class AppsController < ApplicationController
+  before_action :logged_in?, except: [:index, :show]
+  before_action :set_app, only: [:show, :edit, :update, :destroy]
+
   def index
   end
 
@@ -6,12 +9,20 @@ class AppsController < ApplicationController
   end
 
   def new
+    @app = App.new
   end
 
   def edit
   end
 
   def create
+    @app = App.new
+
+    if @app.save
+      redirect_to root_path
+    else
+      render 'new'
+    end
   end
 
   def update
@@ -19,4 +30,14 @@ class AppsController < ApplicationController
 
   def destroy
   end
+
+  private
+
+    def set_app
+      @app = App.find(params[:id])
+    end
+
+    def app_params
+      params.require(:app).permit(:name, :url, :description)
+    end
 end

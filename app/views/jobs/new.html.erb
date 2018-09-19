@@ -1,2 +1,38 @@
 <h1>Jobs#new</h1>
 <p>Find me in app/views/jobs/new.html.erb</p>
+<center>
+
+
+<%= form_for @job do |f| %>
+
+  <% if @job.errors.any? %>
+    <div id="error_explanation">
+      <p>
+        <%= pluralize(@job.errors.count, "error") %> prohibited
+        this article from being saved:
+      </p>
+      <% @job.errors.full_messages.each do |msg| %>
+        <li><center><%= msg %></li>
+      <% end %>
+    </div>
+  <% end %>
+
+  <p>
+    <%= f.label 'Name' %>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label 'URL' %>
+    <%= f.text_field :url %>
+  </p>
+
+  <p>
+    <%= f.label 'Description' %>
+    <%= f.text_area :description %>
+  </p>
+
+  <%= f.submit class: 'btn btn-secondary' %>
+
+<% end %>
+</center>
