@@ -8,23 +8,34 @@
       <h1 class='section-head'>Hey, I'm Jim.</h1>
 
       <div class='row'>
-        <div class='col-2'></div>
-        <div class='col-8'>
+        <div class='col'>
           <p>So you're here because you want to know more about me.
           That's cool. Here's a bunch of stuff I did. </p>
         </div>
-        <div class='col-2'></div>
+        <div class='col'>
+          <li>
+            email resume
+          </li>
+          <li>
+            icons for each project
+          </li>
+          <li>
+            jumbotron or carosel
+          </li>
+          <li>
+            stanley: https://justfreethemes.com/stanleywp-free-portfolio-wordpress-theme/
+          </li>
+        </div>
       </div>
     </center>
   </div>
 
   <div class='showoff'>
     <h3>APPS AND WEBSITES</h3>
-    <div class='col-2'></div>
     <div class='container-fluid'>
       <div class='row'>
         <% @apps.each do |app| %>
-          <div class='col-4 showoff-block'>
+          <div class='col'>
             <ul>
               <li><%= app.name %></li>
               <li><%= app.url %></li>
@@ -34,26 +45,18 @@
         <% end %>
       </div>
     </div>
-    <div class='col-2'></div>
   </div>
 
   <div class='showoff'>
     <h3>WRITING AND EDITING</h3>
-    <div class='col-2'></div>
     <div class='container-fluid'>
       <div class='row'>
         <% @jobs.each do |job| %>
-          <div class='col-4 showoff-block'>
+          <div class='col'>
             <ul>
-              <li>
-                <%= job.name %>
-              </li>
-              <li>
-                <%= job.url %>
-              </li>
-              <li>
-                <%= job.description %>
-              </li>
+              <li><%= job.name %></li>
+              <li><%= job.url %></li>
+              <li><%= job.description %></li>
             </ul>
           </div>
         <% end %>
