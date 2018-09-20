@@ -16,7 +16,7 @@ class AppsController < ApplicationController
   end
 
   def create
-    @app = App.new
+    @app = App.new(app_params)
 
     if @app.save
       redirect_to root_path
