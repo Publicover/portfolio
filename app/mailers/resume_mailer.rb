@@ -6,7 +6,7 @@ class ResumeMailer < ApplicationMailer
   #   en.resume_mailer.send_resume.subject
   #
   def send_resume(address)
-    @greeting = "Hi"
+    @greeting = "Hey there."
 
     attachments['jim_resume.pdf'] = File.read('public/jim_resume.pdf')
     mail to: address, subject: 'My resume'

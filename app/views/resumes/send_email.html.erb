@@ -1,7 +1,17 @@
-<h1>Resumes#send_email</h1>
-<p>Find me in app/views/resumes/send_email.html.erb</p>
-<br><h1><p>You sent an email to <%= params[:address] %>. </p></h1>
-
-<center>
-  Back home: <%= link_to 'DASHBOARD', root_path %>
-</center>
+<div class='container'>
+  <div class='row'>
+    <div class='col showoff'>
+      <center>
+        <p>I sent an email to <strong><%= params[:address] %></strong>. Thanks.</p>
+      </center>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col'>
+      <center>
+        <p>I'm not telling you how to live, but you might want to go back to
+         the <br /><h3><%= link_to 'home page', root_path %></h3></p>
+      </center>
+    </div>
+  </div>
+</div>

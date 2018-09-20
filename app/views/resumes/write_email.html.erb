@@ -1,16 +1,27 @@
-<h1>Resumes#write_email</h1>
-<p>Find me in app/views/resumes/write_email.html.erb</p>
 
-<center>
-<h1>Write an email</h1>
-<center>
+<div class='container-fluid'>
+  <div class='row'>
+    <div class='col showoff'>
+      <center>
+        <h3>Want my resumé?</h3>
+        <p>Share your email below and hit the button. Just like magic.</p>
+      </center>
+    </div>
+  </div>
+</div>
 
-<div class="signin-box">
 
-<%= form_tag resumes_send_email_path do %>
- <%= email_field_tag :address, nil, placeholder: "Email address" %>
- <%= submit_tag "SEND ME AN EMAIL", class: 'btn'%>
-<% end %>
+<div class="container">
+  <div class='row'>
+    <div class='col'>
 
-</center>
+
+      <center>
+        <%= form_tag resumes_send_email_path do %>
+         <p><%= email_field_tag :address, nil, placeholder: "Email address" %></p>
+         <p><%= submit_tag "HIT ME", class: 'btn btn-outline-secondary btn-sm'%></p>
+        <% end %>
+      </center>
+    </div>
+  </div>
 </div>

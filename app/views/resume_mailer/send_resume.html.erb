@@ -1,9 +1,16 @@
-<h1>ResumeMailer#send_resume</h1>
 
 <p>
-  <%= @greeting %>, find me in app/views/resume_mailer/send_resume.html.erb
+  <%= @greeting %>
 </p>
 
+<p>Thanks for taking the time to check out my resumé.</p>
+
 <p>
-  Attached is a copy of my resume. Please let me know if you have any questions.
+   You found my online portfolio, but you can check out my work in a little more
+   detail at <a href="<%= ENV['MY_GITHUB'] %>">github</a> and
+   <a href="<%= ENV['MY_LI'] %>">LinkedIn</a>.
 </p>
+
+<p>Don't hesitate to reach out if you have any questions.</p>
+
+<p>—jim</p>
