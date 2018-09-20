@@ -1,0 +1,16 @@
+<h1>Resumes#write_email</h1>
+<p>Find me in app/views/resumes/write_email.html.erb</p>
+
+<center>
+<h1>Write an email</h1>
+<center>
+
+<div class="signin-box">
+
+<%= form_tag resumes_send_email_path do %>
+ <%= email_field_tag :address, nil, placeholder: "Email address" %>
+ <%= submit_tag "SEND ME AN EMAIL", class: 'btn'%>
+<% end %>
+
+</center>
+</div>

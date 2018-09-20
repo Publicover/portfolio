@@ -11,5 +11,8 @@ Rails.application.routes.draw do
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
 
+  get 'resumes/write_email' => 'resumes#write_email'
+  post 'resumes/send_email' => 'resumes#send_email'
+
   root 'dashboards#index'
 end
