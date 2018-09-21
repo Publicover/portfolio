@@ -14,8 +14,18 @@
 
 @import "bootstrap";
 
+body {
+  // font-family: Consolas, "Courier New", Monospace;
+  font-family: Avenir;
+  // font-family: Verdana, Geneva, sans-serif;
+  // font-family: "Trebuchet MS", Helvetica, sans-serif;
+  // font-family: Tahoma, Geneva, sans-serif;
+  // font-family: 'Spectral', 'serif';
+}
+
 nav {
   background-color: #29BB9C;
+  font-family: "Montserrat", sans-serif, Arial, serif;
   // padding: 50px;
 }
 

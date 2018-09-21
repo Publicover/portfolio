@@ -11,6 +11,9 @@
 
   <div class='collapse navbar-collapse' id='myNavbar'>
     <ul class='navbar-nav ml-auto text-nowrap'>
+      <li class='nav-item nav-link <%= 'active' if current_page?(root_path) %>'>
+        <%= link_to 'Home', root_path, class: 'nav-link' %>
+      </li> 
       <li class='nav-item nav-link <%= 'active' if current_page?(apps_path) %>'>
         <%= link_to 'Programmer', apps_path, class: 'nav-link' %>
       </li>
