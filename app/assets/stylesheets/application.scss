@@ -29,8 +29,18 @@ nav {
   // padding: 50px;
 }
 
+// .card-col {
+//   height: 21%;
+//   width: 21%;
+// }
+
 .card {
   width: 15rem;
+}
+
+.card-img-top {
+  height: 100%;
+  width: 100%;
 }
 
 .container-fluid {
@@ -65,10 +75,21 @@ nav {
   text-align: center;
 }
 
-.card-icon {
-  max-width: 25%;
-  overflow: hidden;
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
 }
+
+// .card-icon {
+//   max-width: 25%;
+//   overflow: hidden;
+// }
+
+// .chop-pic {
+//   width: 5%;
+//   height:5%;
+// }
 
 // .nav-item {
 //   padding-left: 2%;
