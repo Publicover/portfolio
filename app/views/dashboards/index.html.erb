@@ -28,7 +28,7 @@
     </center>
   </div>
 
-  <div class='showoff'>
+  <div id='apps-block'>
     <p>If you want to see this as a more traditional resumé, I'm happy to send you
       <%= link_to 'an email', resumes_write_email_path %> automagically.</p><br />
     <h3>APPS AND WEBSITES</h3><br />
@@ -38,7 +38,7 @@
             <!-- TODO: CENTER BOXES ON PAGE DESPITE HOW MANY THERE ARE -->
                   <!-- SO ROW OF ONE ISN'T UNDER FIRST ITEM -->
                   <!-- HAVE BEEN USING .card-icon IN CSS -->
-          <div class='col'>
+          <div class='col bottom-pad'>
             <div class='card'>
               <%= image_tag(app.img_url, alt: 'Jennifer Connelly, of course.', class: 'card-img-top') %>
               <div class='card-body'>
@@ -57,12 +57,12 @@
     </div>
   </div>
 
-  <div class='showoff'>
+  <div id='jobs-block'>
     <h3>WRITING AND EDITING</h3><br />
     <div class='container-fluid'>
       <div class='row'>
         <% @jobs.each do |job| %>
-        <div class='col'>
+        <div class='col bottom-pad'>
           <div class='card'>
             <%= image_tag(job.img_url, alt: 'Jennifer Connelly, of course.', class: 'card-img-top') %>
             <div class='card-body'>
