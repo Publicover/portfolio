@@ -27,6 +27,31 @@
     <%= f.text_area :description %>
   </p>
 
+  <p>
+    <%= f.label 'Image URL' %>
+    <%= f.text_field :img_url %>
+  </p>
+
+  <p>
+    <%= f.label 'Short Description' %>
+    <%= f.text_field :short_description %>
+  </p>
+
+  <p>
+    <%= f.label 'Description' %>
+    <%= f.text_area :description %>
+  </p>
+
+  <p>
+    <%= f.label 'Additional Notes' %>
+    <%= f.text_area :additional_notes %>
+  </p>
+
+  <p>
+    <%= f.label 'Time Period' %>
+    <%= f.text_field :time_period %>
+  </p>
+
   <%= f.submit "Submit", class: "btn btn-secondary"  %>
 
 <% end %>

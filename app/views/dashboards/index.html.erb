@@ -34,7 +34,7 @@
     <h3>APPS AND WEBSITES</h3><br />
     <div class='container-fluid'>
       <div class='row'>
-        <% @apps.each do |app| %>
+        <% @apps.reverse.each do |app| %>
             <!-- TODO: CENTER BOXES ON PAGE DESPITE HOW MANY THERE ARE -->
                   <!-- SO ROW OF ONE ISN'T UNDER FIRST ITEM -->
                   <!-- HAVE BEEN USING .card-icon IN CSS -->
@@ -46,7 +46,11 @@
                 <p class='card-text'><%= app.short_description %></p>
                 <%= link_to 'show', app_path(id: app.id), class: 'btn btn-outline-secondary' %>
               </div>
+              <div class='card-footer text-muted'>
+                <%= app.time_period %>
+              </div>
             </div>
+
             <% if session[:user_id] %>
               <%= link_to 'edit', edit_app_path(id: app.id) %><br />
               <%= link_to 'delete', app_path(id: app.id), method: :delete  %>
@@ -69,6 +73,9 @@
               <h5 class='card-title'><%= job.name %></h5>
               <p class='card-text'><%= job.short_description %></p>
               <%= link_to 'show', job_path(id: job.id), class: 'btn btn-outline-secondary' %>
+            </div>
+            <div class='card-footer text-muted'>
+              <%= job.time_period %>
             </div>
           </div>
           <% if session[:user_id] %>
