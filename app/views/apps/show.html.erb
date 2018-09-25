@@ -11,6 +11,13 @@
 
 <div class='container-fluid intro'>
   <div class='row'>
+    <% if session[:user_id] %>
+      <div class='col little-padding-top center'>
+        <%= link_to 'edit', app_path(id: @app) %>
+      </div>
+    <% end %>
+  </div>
+  <div class='row'>
     <div class='col portrait center'>
       <p><%= @app.description %></p>
     </div>

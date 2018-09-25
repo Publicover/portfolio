@@ -11,6 +11,13 @@
 
 <div class='container-fluid intro'>
   <div class='row'>
+    <% if session[:user_id] %>
+      <div class='col portrait center'>
+        <%= link_to 'edit', job_path(id: @job) %>
+      </div>
+    <% end %>
+  </div>
+  <div class='row'>
     <div class='col portrait center'>
       <p><%= @job.description %></p>
     </div>

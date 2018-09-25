@@ -14,6 +14,10 @@
 
 @import "bootstrap";
 
+// body, html {
+//   height: 100%;
+// }
+
 body {
   // font-family: Consolas, "Courier New", Monospace;
   font-family: Avenir;
@@ -24,8 +28,8 @@ body {
 }
 
 nav {
-  background-color: #29BB9C;
   font-family: "Montserrat", sans-serif, Arial, serif;
+  background-color: #29BB9C;
   // padding: 50px;
 }
 
@@ -137,7 +141,7 @@ nav {
 }
 
 .para-test {
-  background-image: url('/red-pen.jpg');
+  background-image: url('/red-pen-copy.jpg');
   object-fit: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -147,13 +151,21 @@ nav {
   background-attachment: fixed;
 }
 
-.app-parallax {
-
+.little-padding-top {
+  padding-top: 3%;
 }
 
 .pic-text {
   margin-top: 5%;
   color: white;
+}
+
+.f-block {
+  padding: 3%;
+}
+
+.page-footer {
+  background-color: #2F2F2F;
 }
 
 // .card-icon {
