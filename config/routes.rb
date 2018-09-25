@@ -7,7 +7,9 @@ Rails.application.routes.draw do
     resources :teches
   end
 
-  resources :jobs
+  resources :jobs do
+    resources :clients
+  end
 
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'

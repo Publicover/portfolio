@@ -25,7 +25,7 @@ class TechesController < ApplicationController
     if @tech.save
       redirect_to @app
     else
-      render 'edit'
+      render 'new'
     end
   end
 

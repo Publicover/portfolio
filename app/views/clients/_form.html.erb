@@ -1,0 +1,30 @@
+<%= form_for @client, url: job_clients_path(params[:job_id]) do |f| %>
+  <% if @client.errors.any? %>
+    <div id="error_explanation">
+      <p>
+        <%= pluralize(@client.errors.count, "error") %> prohibited
+        this article from being saved:
+      </p>
+      <% @client.errors.full_messages.each do |msg| %>
+        <li><center><%= msg %></li>
+      <% end %>
+    </div>
+  <% end %>
+
+  <div>
+    <%= f.label 'Name' %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.label 'Image URL' %>
+    <%= f.text_field :image_url %>
+  </div>
+
+  <div>
+    <%= f.hidden_field :job_id, value: params[:job_id] %>
+  </div>
+
+  <%= f.submit %><br />
+
+<% end %>

@@ -6,7 +6,6 @@
                                      height: 100%">
   <h2 class='display4'><%= @job.name %></h2>
   <p class='lead'><%= @job.short_description %></p>
-  <hr class='my-4' />
 </div>
 
 <div class='container-fluid intro'>
@@ -15,11 +14,19 @@
       <div class='col portrait center'>
         <%= link_to 'edit', job_path(id: @job) %>
       </div>
+      <div class='col portrait center'>
+        <%= link_to 'add client', new_job_client_path(@job) %>
+      </div>
     <% end %>
   </div>
   <div class='row'>
     <div class='col portrait center'>
-      <p><%= @job.description %></p>
+      <h4>Here's what you should know:</h4>
+      <p><%= @job.description %></p><br />
+      <h4>Notable clients:</h4>
+      <% @job.clients.each do |client| %>
+        <%= client.name %><br />
+      <% end %>
     </div>
   </div>
 </div>
