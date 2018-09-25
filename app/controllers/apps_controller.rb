@@ -6,6 +6,7 @@ class AppsController < ApplicationController
   end
 
   def show
+    @teches = @app.teches
   end
 
   def new

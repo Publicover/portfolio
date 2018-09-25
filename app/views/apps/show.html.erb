@@ -6,7 +6,6 @@
                                      height: 100%">
   <h2 class='display4'><%= @app.name %></h2>
   <p class='lead'><%= @app.short_description %></p>
-  <hr class='my-4' />
 </div>
 
 <div class='container-fluid intro'>
@@ -19,7 +18,12 @@
   </div>
   <div class='row'>
     <div class='col portrait center'>
+      <h4>Here's what you should know:</h4>
       <p><%= @app.description %></p>
+      <h4>Technologies:</h4>
+      <% @app.teches.each do |tech| %>
+          <%= tech.name %><br />
+      <% end %>
     </div>
   </div>
 </div>
