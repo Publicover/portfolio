@@ -14,6 +14,9 @@
       <div class='col little-padding-top center'>
         <%= link_to 'edit', app_path(id: @app) %>
       </div>
+      <div class='col little-padding-top center'>
+        <%= link_to 'add tech', new_app_tech_path(@app) %>
+      </div>
     <% end %>
   </div>
   <div class='row'>

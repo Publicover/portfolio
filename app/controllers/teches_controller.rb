@@ -1,5 +1,5 @@
 class TechesController < ApplicationController
-  before_action :set_app, only: [:index, :create, :destroy]
+  before_action :set_app, only: [:index, :new, :create, :destroy]
   before_action :set_tech, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -18,7 +18,7 @@ class TechesController < ApplicationController
   end
 
   def create
-    @app = App.where(params[:app_id])
+    # @app = App.find(params[:app_id])
     @tech = Tech.new(teches_params)
 
     if @tech.save
@@ -39,7 +39,7 @@ class TechesController < ApplicationController
   private
 
     def set_app
-      @app = App.where(params[:app_id])
+      @app = App.find(params[:app_id])
     end
 
     def set_tech

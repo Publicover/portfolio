@@ -1,0 +1,25 @@
+<%= form_for @tech, url: app_teches_path(params[:app_id]) do |f| %>
+  <% if @tech.errors.any? %>
+    <div id="error_explanation">
+      <p>
+        <%= pluralize(@tech.errors.count, "error") %> prohibited
+        this article from being saved:
+      </p>
+      <% @tech.errors.full_messages.each do |msg| %>
+        <li><center><%= msg %></li>
+      <% end %>
+    </div>
+  <% end %>
+
+  <div>
+    <%= f.label 'Name' %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.hidden_field :app_id, value: params[:app_id] %>
+  </div>
+
+  <%= f.submit %>
+
+<% end %>
