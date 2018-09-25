@@ -1,9 +1,10 @@
 class TechesController < ApplicationController
+  before_action :logged_in?
   before_action :set_app, only: [:index, :new, :create, :destroy]
   before_action :set_tech, only: [:show, :edit, :update, :destroy]
 
   def index
-    @app = App.where(params[:app_id])
+    @app = App.find(params[:app_id])
     @teches = @app.teches
   end
 
