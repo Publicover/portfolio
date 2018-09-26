@@ -157,6 +157,18 @@ nav {
   background-attachment: fixed;
 }
 
+.apps-test {
+  background-image: url('/skeleton.jpg');
+  object-fit: cover;
+  // object-fit: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  height: 100%;
+
+  background-attachment: fixed;
+}
+
 .little-padding-top {
   padding-top: 3%;
 }
@@ -184,7 +196,7 @@ nav {
   margin-bottom: 2%;
 }
 
-#index-blurb {
+.index-blurb {
   margin: 5%;
 }
 
