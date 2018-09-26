@@ -16,9 +16,6 @@
           icons for each project
         </li>
         <li>
-          jumbotron or carosel
-        </li>
-        <li>
           stanley: https://justfreethemes.com/stanleywp-free-portfolio-wordpress-theme/
         </li>
       </div>
@@ -33,52 +30,56 @@
   </div>
 </div>
 
-<div class='dashboard-index'>
-  <h4 class='apps-block center'>APPS AND WEBSITES</h4>
-  <div class='card-deck dashboard-index'>
-
-    <% @apps.reverse.each do |app| %>
-      <div class='card mx-auto'>
-        <%= image_tag(app.img_url, alt: 'Jennifer Connelly, of course.', class: 'card-img-top') %>
-        <div class='card-body'>
-          <h5 class='card-title'><%= app.name %></h5>
-          <p class='card-text'><%= app.short_description %></p>
-          <%= link_to 'show', app_path(id: app.id), class: 'btn btn-outline-secondary' %>
-        </div>
-        <div class='card-footer text-muted'>
-          <%= app.time_period %>
-        </div>
-        <% if session[:user_id] %>
-          <%= link_to 'edit', edit_app_path(id: app.id) %><br />
-          <%= link_to 'delete', app_path(id: app.id), method: :delete  %>
+    <h3 class='center'>APPS AND WEBSITES</h3><br />
+    <div class='container-fluid'>
+      <div class='row'>
+        <% @apps.reverse.each do |app| %>
+            <!-- TODO: CENTER BOXES ON PAGE DESPITE HOW MANY THERE ARE -->
+                  <!-- SO ROW OF ONE ISN'T UNDER FIRST ITEM -->
+                  <!-- HAVE BEEN USING .card-icon IN CSS -->
+          <div class='col bottom-pad'>
+            <div class='card mx-auto'>
+              <%= image_tag(app.img_url, alt: 'Jennifer Connelly, of course.', class: 'card-img-top') %>
+              <div class='card-body'>
+                <h5 class='card-title'><%= app.name %></h5>
+                <p class='card-text'><%= app.short_description %></p>
+                <%= link_to 'show', app_path(id: app.id), class: 'btn btn-outline-secondary' %>
+              </div>
+              <div class='card-footer text-muted'>
+                <%= app.time_period %>
+              </div>
+              <% if session[:user_id] %>
+                <%= link_to 'edit', edit_app_path(id: app.id) %><br />
+                <%= link_to 'delete', app_path(id: app.id), method: :delete  %>
+              <% end %>
+            </div>
+          </div>
         <% end %>
       </div>
-    <% end %>
+    </div>
   </div>
-</div>
 
-<div class='dashboard-index'>
-  <h4 class='apps-block center'>WRITING AND EDITING</h4>
-  <div class='card-deck'>
-
-    <% @jobs.reverse.each do |job| %>
-    <div class='card mx-auto'>
-
-      <%= image_tag(job.img_url, alt: 'alt text', class: 'card-img-top') %>
-      <div class='card-body'>
-        <h5 class=card-title><%= job.name %></h5>
-        <p class='card-text'><%= job.short_description %></p>
-        <%= link_to 'show', job_path(id: job.id), class: 'btn btn-outline-secondary' %>
-      </div>
-      <div class='card-footer text-muted'>
-        <%= job.time_period %>
-      </div>
-      <% if session[:user_id] %>
-        <%= link_to 'edit', edit_job_path(id: job.id) %><br />
-        <%= link_to 'delete', job_path(id: job.id), method: :delete  %>
+  <h3 class='center'>WRITING AND EDITING</h3><br />
+  <div class='container-fluid'>
+    <div class='row'>
+      <% @jobs.reverse.each do |job| %>
+        <div class='col bottom-pad'>
+          <div class='card mx-auto'>
+            <%= image_tag(job.img_url, alt: 'Jennifer Connelly, of course.', class: 'card-img-top') %>
+            <div class='card-body'>
+              <h5 class='card-title'><%= job.name %></h5>
+              <p class='card-text'><%= job.short_description %></p>
+              <%= link_to 'show', job_path(id: job.id), class: 'btn btn-outline-secondary' %>
+            </div>
+            <div class='card-footer text-muted'>
+              <%= job.time_period %>
+            </div>
+            <% if session[:user_id] %>
+              <%= link_to 'edit', edit_job_path(id: job.id) %><br />
+              <%= link_to 'delete', job_path(id: job.id), method: :delete  %>
+            <% end %>
+          </div>
+        </div>
       <% end %>
     </div>
-    <% end %>
-
   </div>
-</div>

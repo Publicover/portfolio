@@ -33,6 +33,14 @@ nav {
   // padding: 50px;
 }
 
+.navbar {
+  padding: 2%;
+}
+
+.navbar-brand {
+  padding: 25%;
+}
+
 // .card-col {
 //   height: 21%;
 //   width: 21%;
@@ -40,6 +48,12 @@ nav {
 
 .card {
   width: 15rem;
+}
+
+.card:hover {
+  outline-style: solid;
+  outline-width: medium;
+  outline-color: #29BB9C;
 }
 
 .card-img-top {
@@ -50,10 +64,6 @@ nav {
 .container-fluid {
   padding-left: 0px !important;
   padding-right: 0px !important;
-}
-
-.navbar-brand {
-  padding: 25%;
 }
 
 .portrait {
@@ -71,7 +81,8 @@ nav {
 }
 
 .section-head {
-  padding: 3% 3% 0 3%;
+  margin-top: 3%;
+  margin-bottom: 3%;
 }
 
 .apps-block {
@@ -87,6 +98,7 @@ nav {
 
 .card {
   margin-left: auto;
+  height: 100%;
 }
 
 .card-img-top {
