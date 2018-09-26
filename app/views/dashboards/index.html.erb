@@ -27,14 +27,16 @@
 </div>
 
 <div>
-  <div id='apps-block'>
+  <div class='apps-block'>
     <p>If you want to see this as a more traditional resumé, I'm happy to send you
-      <%= link_to 'an email', resumes_write_email_path %> automagically.</p><br />
+      <%= link_to 'an email', resumes_write_email_path %> automagically.</p>
   </div>
 </div>
 
-<div>
-  <div class='card-deck'>
+<div class='dashboard-index'>
+  <h4 class='apps-block center'>APPS AND WEBSITES</h4>
+  <div class='card-deck dashboard-index'>
+
     <% @apps.reverse.each do |app| %>
       <div class='card mx-auto'>
         <%= image_tag(app.img_url, alt: 'Jennifer Connelly, of course.', class: 'card-img-top') %>
@@ -55,7 +57,8 @@
   </div>
 </div>
 
-<div>
+<div class='dashboard-index'>
+  <h4 class='apps-block center'>WRITING AND EDITING</h4>
   <div class='card-deck'>
 
     <% @jobs.reverse.each do |job| %>
