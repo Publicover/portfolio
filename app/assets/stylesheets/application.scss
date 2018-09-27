@@ -190,7 +190,6 @@ nav {
 .apps-test {
   background-image: url('/skeleton.jpg');
   object-fit: cover;
-  // object-fit: contain;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
@@ -249,6 +248,7 @@ nav {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
+
 
 // .card-icon {
 //   max-width: 25%;

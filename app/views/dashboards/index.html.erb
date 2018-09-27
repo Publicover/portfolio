@@ -26,9 +26,6 @@
     <div class='container-fluid'>
       <div class='row'>
         <% @apps.reverse.each do |app| %>
-            <!-- TODO: CENTER BOXES ON PAGE DESPITE HOW MANY THERE ARE -->
-                  <!-- SO ROW OF ONE ISN'T UNDER FIRST ITEM -->
-                  <!-- HAVE BEEN USING .card-icon IN CSS -->
           <div class='col bottom-pad'>
             <div class='card mx-auto hvr-grow-shadow'>
               <%= image_tag(app.img_url, alt: "#{app.name}", class: 'card-img-top') %>
