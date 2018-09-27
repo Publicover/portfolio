@@ -38,7 +38,7 @@
                   <!-- SO ROW OF ONE ISN'T UNDER FIRST ITEM -->
                   <!-- HAVE BEEN USING .card-icon IN CSS -->
           <div class='col bottom-pad'>
-            <div class='card mx-auto'>
+            <div class='card mx-auto hvr-grow-shadow'>
               <%= image_tag(app.img_url, alt: 'Jennifer Connelly, of course.', class: 'card-img-top') %>
               <div class='card-body'>
                 <h5 class='card-title'><%= app.name %></h5>
@@ -49,8 +49,8 @@
                 <%= app.time_period %>
               </div>
               <% if session[:user_id] %>
-                <%= link_to 'edit', edit_app_path(id: app.id) %><br />
-                <%= link_to 'delete', app_path(id: app.id), method: :delete  %>
+                <%= link_to 'edit', edit_app_path(id: app.id), class: 'center' %><br />
+                <%= link_to 'delete', app_path(id: app.id), method: :delete, class: 'center'  %>
               <% end %>
             </div>
           </div>
@@ -64,7 +64,7 @@
     <div class='row'>
       <% @jobs.reverse.each do |job| %>
         <div class='col bottom-pad'>
-          <div class='card mx-auto'>
+          <div class='card mx-auto hvr-grow-shadow'>
             <%= image_tag(job.img_url, alt: 'Jennifer Connelly, of course.', class: 'card-img-top') %>
             <div class='card-body'>
               <h5 class='card-title'><%= job.name %></h5>
@@ -75,8 +75,8 @@
               <%= job.time_period %>
             </div>
             <% if session[:user_id] %>
-              <%= link_to 'edit', edit_job_path(id: job.id) %><br />
-              <%= link_to 'delete', job_path(id: job.id), method: :delete  %>
+              <%= link_to 'edit', edit_job_path(id: job.id), class: 'center' %><br />
+              <%= link_to 'delete', job_path(id: job.id), method: :delete, class: 'center'  %>
             <% end %>
           </div>
         </div>
