@@ -47,7 +47,7 @@ group :development, :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'rspec-rails'
-  gem 'sqlite3'
+  # gem 'sqlite3'
   gem 'shoulda-matchers'
   gem 'database_cleaner'
   # gem 'factory_girl_rails'
