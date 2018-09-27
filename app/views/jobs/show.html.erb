@@ -12,7 +12,7 @@
   <div class='row'>
     <% if session[:user_id] %>
       <div class='col portrait center'>
-        <%= link_to 'edit', job_path(id: @job) %>
+        <%= link_to 'edit', edit_job_path(id: @job) %>
       </div>
       <div class='col portrait center'>
         <%= link_to 'add client', new_job_client_path(@job) %>

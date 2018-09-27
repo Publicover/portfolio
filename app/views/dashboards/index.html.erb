@@ -39,7 +39,7 @@
                   <!-- HAVE BEEN USING .card-icon IN CSS -->
           <div class='col bottom-pad'>
             <div class='card mx-auto hvr-grow-shadow'>
-              <%= image_tag(app.img_url, alt: 'Jennifer Connelly, of course.', class: 'card-img-top') %>
+              <%= image_tag(app.img_url, alt: "#{app.name}", class: 'card-img-top') %>
               <div class='card-body'>
                 <h5 class='card-title'><%= app.name %></h5>
                 <p class='card-text'><%= app.short_description %></p>
@@ -65,7 +65,7 @@
       <% @jobs.reverse.each do |job| %>
         <div class='col bottom-pad'>
           <div class='card mx-auto hvr-grow-shadow'>
-            <%= image_tag(job.img_url, alt: 'Jennifer Connelly, of course.', class: 'card-img-top') %>
+            <%= image_tag(job.img_url, alt: "#{job.name}", class: 'card-img-top') %>
             <div class='card-body'>
               <h5 class='card-title'><%= job.name %></h5>
               <p class='card-text'><%= job.short_description %></p>
