@@ -7,8 +7,10 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+ruby '2.3.1'
 gem 'rails', '~> 5.0.7'
-
+gem 'pg'
+gem 'rails_12factor', group: :production
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -53,7 +55,6 @@ group :development do
 end
 
 group :production do
-  gem 'pg', '~> 0.20'
   gem 'rails_12factor'
 end
 
