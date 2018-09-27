@@ -5,12 +5,14 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 ruby '2.3.1'
-gem 'rails', '~> 5.0.7'
 gem 'pg'
 gem 'rails_12factor', group: :production
+
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'rails', '~> 5.0.7'
+# Use sqlite3 as the database for Active Record
+# gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -41,8 +43,15 @@ gem 'rails-ujs', '~> 5.1.0.beta1'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
-  # Use sqlite3 as the database for Active Record
+  gem 'brakeman', require: false
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'rspec-rails'
   gem 'sqlite3'
+  gem 'shoulda-matchers'
+  gem 'database_cleaner'
+  # gem 'factory_girl_rails'
+  gem 'selenium-webdriver', '>= 3.3'
 end
 
 group :development do
