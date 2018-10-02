@@ -8,10 +8,8 @@
 
     <div class='row'>
       <div class='col'>
-        <p>I've been a Ruby on Rails dev for
-          <%= distance_of_time_in_words(Date.today, Date.new(2016, 03, 30)) %>,
-           and I've been writing and editing for
-           <%= distance_of_time_in_words(Date.today, Date.new(2005, 07, 30)) %>.
+        <p>I've been a Ruby on Rails dev for <%= dev_time %>,
+           and I've been writing and editing for <%= poet_time %>.
         </p>
         <p>And you're here because you want to know more about me.
         Excellent. Here's what I do. </p>
@@ -33,7 +31,7 @@
         <% @apps.reverse.each do |app| %>
           <div class='col bottom-pad'>
             <div class='card mx-auto hvr-grow-shadow'>
-              <%= image_tag(app.img_url, alt: "#{app.name}", class: 'card-img-top') %>
+              <%= image_tag(app.img_url, alt: "#{app.name}", class: 'card-img-top img-fluid') %>
               <div class='card-body'>
                 <h5 class='card-title'><%= app.name %></h5>
                 <p class='card-text'><%= app.short_description %></p>
@@ -59,7 +57,7 @@
       <% @jobs.reverse.each do |job| %>
         <div class='col bottom-pad'>
           <div class='card mx-auto hvr-grow-shadow'>
-            <%= image_tag(job.img_url, alt: "#{job.name}", class: 'card-img-top') %>
+            <%= image_tag(job.img_url, alt: "#{job.name}", class: 'card-img-top  img-fluid') %>
             <div class='card-body'>
               <h5 class='card-title'><%= job.name %></h5>
               <p class='card-text'><%= job.short_description %></p>

@@ -249,6 +249,10 @@ nav {
   transform: scale(1.1);
 }
 
+.img-fluid {
+  max-width: 100% !important;
+  height: auto !important;
+}
 
 // .card-icon {
 //   max-width: 25%;
