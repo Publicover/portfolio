@@ -5,12 +5,12 @@
       <div class='col f-block'>
         <h4>CONTACT</h4>
         Want to get in touch? <br />
-        I'm at fake@email.com.
+        I'm at <%= "#{ENV['GMAILU']}" %>.
       </div>
       <div class='col f-block'>
         <h4>MY LINKS</h4>
-        github <br />
-        LinkedIn <br />
+        <%= link_to 'github', "#{ENV['MY_GITHUB']}" %><br />
+        <%= link_to 'LinkedIn', "#{ENV['MY_LI']}" %> <br />
       </div>
       <div class='col f-block'>
         <h4>ABOUT</h4>
