@@ -27,7 +27,7 @@ class JobsController < ApplicationController
 
   def update
     if @job.update(job_params)
-      redirect_to root_path
+      redirect_to @job
     else
       render 'edit'
     end

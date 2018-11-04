@@ -28,7 +28,7 @@ class AppsController < ApplicationController
 
   def update
     if @app.update(app_params)
-      redirect_to root_path
+      redirect_to @app
     else
       render 'edit'
     end

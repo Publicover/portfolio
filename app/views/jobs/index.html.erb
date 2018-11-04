@@ -7,18 +7,24 @@
 
 <div class='container index-blurb'>
   <div class='row'>
-    <div class='col'>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed porttitor
-      ante. Vivamus quam lorem, luctus et risus id, facilisis tristique magna.
-      Suspendisse maximus, nisi sit amet ullamcorper auctor, urna augue egestas
-      ex, eu porttitor risus diam nec dolor. Pellentesque consequat volutpat
-      libero in tincidunt. Quisque aliquam, augue vitae dictum egestas, dui nibh
-      dignissim tellus, pharetra viverra enim massa ac sem. Aliquam accumsan
-      elit elit, et egestas enim maximus auctor. Vestibulum suscipit lobortis
-      enim eu ullamcorper. Donec ac risus eget diam pulvinar consectetur.
-      Praesent lectus dui, euismod at maximus sed, maximus in lacus. In
-      convallis, augue in dictum consectetur, lectus libero hendrerit enim, sed
-      scelerisque nisi elit a augue.
+    <div class='col-10 mx-auto'>
+      <p>Most of my freelance time is spent on app development these days, but I still
+      take clients who need writing and editing. I've worked with tons of clients
+      of all sizes—-I've been at this for about 13 years, after all.</p>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-10 mx-auto'>
+      <p>My first love has always been poetry. My BA in Poetry is from Northwestern University,
+      and I find it hard to explain just how much that set up me for a life of
+      very serious attention to detail and the inner workings of grammar. I've run
+      with it ever since I graduated.</p>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-10 mx-auto'>
+      <p>You can send an email to <%= "#{ENV['GMAILU']}" %> if you have any questions about my experience.
+      If you want me to send you a resumé, I'm <%= link_to 'happy to', resumes_write_email_path %>.</p>
     </div>
   </div>
 </div>

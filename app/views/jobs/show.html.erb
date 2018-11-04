@@ -29,7 +29,12 @@
   <div class='row'>
     <div class='col portrait center'>
       <h4>Here's what you should know:</h4>
-      <p><%= @job.description %></p><br />
+      <div class='row'>
+        <div class='col-9 mx-auto'>
+          <p><%= @job.description %></p><br />
+        </div>
+      </div>
+
       <h4>Notable clients:</h4>
       <% @job.clients.each do |client| %>
         <%= client.name %><br />
