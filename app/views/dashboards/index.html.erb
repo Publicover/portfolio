@@ -29,7 +29,7 @@
     <div class='container-fluid'>
       <div class='row'>
         <% order_no = 12 %>
-        <% @apps.reverse.each do |app| %>
+        <% @apps.order(:app_order).each do |app| %>
           <div class='col bottom-pad'>
             <div class='card mx-auto hvr-grow-shadow order-<%= order_no %>'>
               <%= image_tag(app.img_url, alt: "#{app.name}", class: 'card-img-top img-fluid') %>
@@ -57,14 +57,14 @@
   <div class='container-fluid'>
     <div class='row'>
       <% order_no = 12 %>
-      <% @jobs.reverse.each do |job| %>
+      <% @jobs.order(:job_order).each do |job| %>
         <div class='col bottom-pad'>
           <div class='card mx-auto hvr-grow-shadow order-<%= order_no %>'>
             <%= image_tag(job.img_url, alt: "#{job.name}", class: 'card-img-top img-fluid') %>
             <% order_no -= 1 %>
             <div class='card-body d-flex flex-column'>
-              <h5 class='card-title'><%= job.name %></h5>
-              <p class='card-text'><%= job.short_description %></p>
+              <h5 class='card-title mt-auto'><%= job.name %></h5>
+              <p class='card-text mt-auto'><%= job.short_description %></p>
               <%= link_to 'show', job_path(id: job.id), class: 'btn btn-outline-secondary mt-auto' %>
             </div>
             <div class='card-footer text-muted'>
