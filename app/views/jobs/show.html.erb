@@ -11,9 +11,9 @@
   }
 </style>
 
-<div class='jumbotron job-parallax <%= @job.color %>'>
-  <h2 class='display4'><%= @job.name %></h2>
-  <p class='lead'><%= @job.short_description %></p>
+<div class='jumbotron job-parallax'>
+  <h2 class='display4'></h2>
+  <p class='lead'></p>
 </div>
 
 <div class='container-fluid intro'>
@@ -30,6 +30,8 @@
 
   <div class='row'>
     <div class='col portrait center'>
+      <h4><%= @job.name %></h4>
+      <h4><%= @job.short_description %></h4><br />
       <h4>Here's what you should know:</h4>
       <div class='row'>
         <div class='col-9 mx-auto'>
