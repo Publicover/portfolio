@@ -37,6 +37,10 @@
           <p><%= @app.description %></p><br />
         </div>
       </div>
+      <h4>Where is it?</h4>
+      <div class='app-url'>
+        <%= @app.url %>
+      </div>
       <h4>Technologies:</h4>
       <% @app.teches.each do |tech| %>
           <%= tech.name %><br />
