@@ -1,24 +1,3 @@
-# README
+# The Portfolio
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This is a portfolio site built from the ground up in Ruby on Rails. If you want to look at apps I've made, things I've writting, clients I've edited for, APIs I've created, then you found the right link. It can be found on https://publicoverpress.herokuapp.com. 
