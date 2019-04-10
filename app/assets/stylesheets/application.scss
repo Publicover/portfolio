@@ -137,6 +137,7 @@ nav {
   margin-bottom: 0;
   padding-bottom: 25%;
   background-color: #18150E;
+  border-radius: 0 !important;
 }
 
 // .jumbotron:after {
@@ -230,7 +231,7 @@ nav {
 .index-blurb {
   margin: 5%;
   margin-bottom: 0;
-  padding-bottom: 25%;
+  padding-bottom: 5%;
 }
 
 .hvr-grow-shadow {
@@ -295,16 +296,16 @@ body {
   height: 100vh;
   position: relative;
   margin: 0;
-  clear: both;
+  // clear: both;
 }
 
-.footer {
-  // margin-top: 200px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
+// footer {
+// //   // margin-top: 200px;
+// //   position: absolute;
+//   bottom: 0;
+//   left: 0;
+//   width: 100%;
+// }
 
 // #bottom-wrapper {
 //   padding-bottom: 15%;
