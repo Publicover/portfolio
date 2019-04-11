@@ -11,23 +11,23 @@
 
   <div class='collapse navbar-collapse' id='myNavbar'>
     <ul class='navbar-nav ml-auto text-nowrap'>
-      <li class='nav-item nav-link <%= 'active' if current_page?(root_path) %>'>
+      <li class='nav-item nav-link <%= active_if(root_path) %>'>
         <%= link_to 'Home', root_path, class: 'nav-link' %>
       </li>
-      <li class='nav-item nav-link <%= 'active' if current_page?(apps_path) %>'>
+      <li class='nav-item nav-link <%= active_if(apps_path) %>'>
         <%= link_to 'Programmer', apps_path, class: 'nav-link' %>
       </li>
-      <li class='nav-item nav-link <%= 'active' if current_page?(jobs_path) %>'>
+      <li class='nav-item nav-link <%= active_if(jobs_path) %>'>
         <%= link_to 'Grammar Pro', jobs_path, class: 'nav-link' %>
       </li>
       <% if session[:user_id] %>
-      <li class='nav-item nav-link <%= 'active' if current_page?(apps_path) %>'>
+      <li class='nav-item nav-link <%= active_if(apps_path) %>'>
         <%= link_to "New app", new_app_path, class: 'nav-link' %>
       </li>
-      <li class='nav-item nav-link <%= 'active' if current_page?(apps_path) %>'>
+      <li class='nav-item nav-link <%= active_if(apps_path) %>'>
         <%= link_to "New job", new_job_path, class: 'nav-link' %>
       </li>
-      <li class='nav-item nav-link <%= 'active' if current_page?(apps_path) %>'>
+      <li class='nav-item nav-link <%= active_if(apps_path) %>'>
         <%= link_to "Log out", logout_path, method: :delete, class: 'nav-link' %>
       </li>
       <% end %>
